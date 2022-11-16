@@ -1,0 +1,13 @@
+<h1> Accomodations available for the night </h1>
+  <div class = "col-12">
+    <ul>
+      <% @flats.each do |flat| %>
+        <li>
+          <%= flat.name %>
+          -
+          <%= link_to "more details", flat  %>
+        </li>
+        <% end %>
+    </ul>
+  </div>
+<%= link_to "+ Add a flat ! ", new_flat_path %>
